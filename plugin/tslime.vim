@@ -65,4 +65,4 @@ endfunction
 nmap <C-c>v :call <SID>Tmux_Vars()<CR>
 vnoremap <C-c><C-c> "ry :call Send_to_Tmux(@r)<CR>
 nmap <C-c><C-c> vip<C-c><C-c>
-cmap tt :call To_Tmux()<CR>
+nnoremap :tt :call To_Tmux()<CR>
