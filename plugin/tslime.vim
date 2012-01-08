@@ -64,5 +64,5 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 command! -nargs=0 TslimeVars :call <SID>Tmux_Vars()
-nnoremap <silent> <leader>f 99[(vab"ry:call Send_to_Tmux(@r . "\n")<cr>
+nnoremap <silent> <leader>f mr99[(vab"ry:call Send_to_Tmux(@r . "\n")<cr>`r
 vnoremap <silent> <leader>f "ry:call Send_to_Tmux(@r . "\n")<cr>
