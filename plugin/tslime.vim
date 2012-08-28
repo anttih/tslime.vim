@@ -22,9 +22,8 @@ function! Send_to_Tmux(text)
   end
 
   let target = b:tmux_sessionname . ":" . b:tmux_windowname . "." . b:tmux_panenumber
-  let line = substitute(a:text, "\n[ ]\\+", " ", 'g')
 
-  call system("tmux set-buffer '" . substitute(line, "'", "'\\\\''", 'g') . "'" )
+  call system("tmux set-buffer '" . substitute(a:text, "'", "'\\\\''", 'g') . "'" )
   call system("tmux paste-buffer -t " . target)
 endfunction
 
